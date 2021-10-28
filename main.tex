@@ -6,6 +6,7 @@
 
 % themes found here: https://latex-beamer.com/tutorials/beamer-themes/
 \usetheme{PaloAlto}
+\setbeamertemplate{footline}[frame number]
 
 \begin{document}
 \maketitle
@@ -13,7 +14,7 @@
 \begin{frame}
 \frametitle{Presentation Roadmap}
 \begin{itemize}
-    \item Rationality
+    \item Preferences
     \item Utility Theory 
     \item Decision Networks
     \item Value of Information
@@ -23,6 +24,42 @@
 \section{Rationality}
 \begin{frame}{Rationality}
 \end{frame}
+
+\section{Preferences}
+\begin{frame}{Preferences}
+We require the ability to compare the degree of desirability of outcomes.
+
+\subsection{Preference Operators}
+Preference Operators:
+\begin{itemize}
+    \item $A \succ B$ if one prefers A over B
+    \item $A \sim B$ if one is indifferent between A and B
+    \item $A \succeq B$ if one prefers A over B or is indifferent
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lottery}
+Preference operators can be used to compare preferences over uncertain outcomes, not just fixed events. \\
+A \textit{lottery} is a set of probabilities associated with a set of outcomes.
+
+Let $S_{1:n}$ be a set of outcomes with associated probabilities $p_{1:n}$. \\
+
+The lottery involving $S$ would be denoted as follows:
+$[S_1:p_1;...;S_n;:p_n]$
+
+\end{frame}
+
+\begin{frame}{Rational Preferences}
+Rational Preferences:
+\begin{itemize}
+    \item \textit{Completeness.} Exactly one of the following holds: $A \succ B, A \sim B, A \prec B$
+    \item \textit{Transitivity.} $(A \succeq B) \land (B \succeq C) \implies A \succeq C$
+    \item \textit{Continuity.} $A \succeq B \succeq C \implies \exists$ probability $p$ such that $[A: p; B: 1-p] \sim C$
+    \item \textit{Independence.} $A \succ B \implies \forall C$ and $\forall$ probability $p, [A:p;C:1-p] \succeq [B:p;C:1-p]$
+\end{itemize}
+TODO: Mention that humans are not rational, but we are only going to focus on rational decisions
+\end{frame}
+
 
 \section{Utility Theory}
 \begin{frame}{Utility Theory}

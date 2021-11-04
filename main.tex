@@ -45,6 +45,7 @@ Rational Preferences:
     \item \textit{Transitivity.} $(A \succeq B) \land (B \succeq C) \implies A \succeq C$
     \item \textit{Continuity.} $A \succeq B \succeq C \implies \exists$ probability $p$ such that $[A: p; B: 1-p] \sim C$
     \item \textit{Independence.} $A \succ B \implies \forall C$ and $\forall$ probability $p, [A:p;C:1-p] \succeq [B:p;C:1-p]$
+    \item \textit{Substitutability} $A \sim B \implies [A:p;C:1-p] \sim [B:p; C:1-p]$
 \end{itemize}
 \end{frame}
 
@@ -65,12 +66,12 @@ $U([S_1:p_1; ... ; S_n:p_n] = \sum_{i=1}^{n} p_{i}U(S_i)$
 \begin{itemize}
     \item Utility Elictation := Inferring the utility function from a human or a group of humans. 
     \item Fix utility of worst outcome at 0, and best outcome at 1
-    \item To determine utility of outcome $S$, detremine probability $p$ s.t. $S \sim [\bar{S}:p;S:1-p]$
+    \item To determine utility of outcome $S$, determine probability $p$ s.t. $S \sim [\bar{S}:p;S:1-p]$
     \item $\therefore U(S) = p$
 \end{itemize}
 \end{frame}
 
-\subsection{Monetary Value as Utility}
+\subsection{Monetary Value}
 \begin{frame}{Monetary Values as Utility}
 \begin{itemize}
    \item Utility of Wealth is not linear 
@@ -95,11 +96,19 @@ $U([S_1:p_1; ... ; S_n:p_n] = \sum_{i=1}^{n} p_{i}U(S_i)$
 *see example notebook*
 \end{frame}
 
+\subsection{Maximum Expected Utility Principle}
+\begin{frame}{Maximum Expected Utility Principle}
+\begin{itemize}
+    \item Maximum Expected Utility Principle := $EU(a|o) = \sum_{s'}P(s'|a,o)U(s')$
+    \item Best action := $a^* = argmax_{a}EU(a|o)$
+\end{itemize} 
+\end{frame}
+
 \section{Decision Networks}
 \begin{frame}{Decision Networks}
 Decision Network (sometimes called influence diagram) := a generalization of a Bayesian Network to include action and utility nodes so we may compactly represent the probability and utility models defining a decision problem. 
 
-\subsection{Definition and Formulation}
+\subsection{Formulation}
 Decision networks are composed of three types of nodes:
 \begin{enumerate}[i]
     \item Chance Node := random variable
@@ -108,7 +117,7 @@ Decision networks are composed of three types of nodes:
 \end{enumerate}
 \end{frame}
 
-\subsection{Decision Network Edges}
+\subsection{Edges}
 \begin{frame}{Decision Network Edges}
 Decision networks contain three kinds of directed edges:
 \begin{enumerate}[i]
